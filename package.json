@@ -1,0 +1,32 @@
+{
+  "name": "videorecognition",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "npm run build && node index.js",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shaon Debnath",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-fileupload": "^0.3.0",
+    "@tensorflow/tfjs": "^1.0.0",
+    "@tensorflow-models/coco-ssd": "^1.0.0",
+    "node-fetch": "^2.3.0",
+    "ejs": "^2.6.1",
+    "body-parser": "^1.18.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "file-loader": "^0.8.5",
+    "http-server": "^0.10.0",
+    "webpack": "^3.5.5",
+    "wrapper-webpack-plugin": "^1.0.0"
+  }
+}

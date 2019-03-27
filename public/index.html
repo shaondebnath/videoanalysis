@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+      body {
+        background: black;
+        color: #2f4d59;
+      }
+      div {
+        border :0px solid #444444;
+        padding:10px;
+
+      }
+    </style>
+	
+	<title> Video Analysis </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+</head>
+
+  
+<body>
+
+<div class="container">
+    <div class="row justify-content-center">
+		<br /> <br />
+	    <h2>Video Analysis and Recognition</h2> <br> <br>
+	</div>
+
+	<form method="post" enctype="multipart/form-data" action="/">
+    
+	<div class="row">
+		<div class="col-md-6 col-sm-12 text-right">Upload your Video: </div> 
+		<div class="col-md-6 col-sm-12 justify-content-left"><input onchange="ValidateSize(this)" type="file" name="video" id="video"/><br /><br /> 
+		<div id="text"></div>
+		</div>		
+	</div>
+	<div class="row justify-content-center">
+	
+	
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-sm-12 text-right"></div> 
+		<div class="col-md-6 col-sm-12 justify-content-left">
+			<input type="submit" class="btn btn-primary" name="upload" id="upload" value="Upload" />
+			<br /><br /> 
+		</div>
+        
+    </div>
+
+</form>
+
+
+<script>
+var fileSize = 200;
+var fileSizeLimit = 100;
+var _validFileExtensions = ["mov", "mp4", "MOV", "MP4"];
+var extensionError =false;
+
+document.getElementById("text").innerHTML = "Select a .mov/ .mp4 video less than "+fileSizeLimit+" MB";
+
+$(document).ready(function() {
+    $('#upload').bind("click",function() 
+    { 
+        var videoVal = $('#video').val(); 		
+		
+        if(videoVal=='') 
+        { 
+            alert("empty input file"); 			
+			return false;
+        } 	
+		else if (fileSize > fileSizeLimit) {
+            alert("File size exceeds "+fileSizeLimit+" MB");
+			document.getElementById("text").innerHTML = "File size exceeds "+fileSizeLimit+" MB";
+			return false;
+           
+        }
+		else if(extensionError){
+			alert("Please upload .mov or .mp4 video.");
+			document.getElementById("text").innerHTML = "Please upload .mov or .mp4 video.";
+			return false;
+		
+		}
+
+		//document.getElementById('upload').disabled = true;
+		return true;
+
+    }); 
+});
+
+
+if( document.getElementById("video").files.length == 0 ){
+    
+}
+
+function ValidateSize(file) {
+        fileSize = file.files[0].size / 1024 / 1024; // in MB
+        if (fileSize > fileSizeLimit) {
+            alert("File size exceeds "+fileSizeLimit+" MB");            
+			document.getElementById("text").innerHTML = "File size exceeds "+fileSizeLimit+" MB";
+           // $(file).val(''); //for clearing with Jquery
+        } 
+		else
+			document.getElementById("text").innerHTML = "";
+
+
+		var fileName = file.files[0].name;
+		var nameArray = fileName.split(".")
+		if (nameArray.length<2)
+            extensionError =  true;
+		else{
+            var extName = nameArray[1];
+            console.log(extName)
+            for (var i=0; i<_validFileExtensions.length; i++){
+                console.log("check "+ _validFileExtensions[i] + " : "+extName)
+                if (_validFileExtensions[i]==extName) {
+                    extensionError = false;
+                    break;
+                }
+                else
+                    extensionError = true;
+
+			}
+		}
+
+
+		// var arrInputs = file.getElementsByTagName("input");
+		// console.log(arrInputs)
+		// for (var i = 0; i < arrInputs.length; i++) {
+		// 	var oInput = arrInputs[i];
+		// 	if (oInput.type == "file") {
+		// 		var sFileName = oInput.value;
+		// 		if (sFileName.length > 0) {
+		// 			var blnValid = false;
+		// 			for (var j = 0; j < _validFileExtensions.length; j++) {
+		// 				var sCurExtension = _validFileExtensions[j];
+		// 				if (sFileName.substr(sFileName.length - sCurExtension.length, sCurExtension.length).toLowerCase() == sCurExtension.toLowerCase()) {
+		// 					blnValid = true;
+		// 					extensionError =  true;
+		// 					break;
+		// 				}
+		// 			}
+		//
+		// 			if (!blnValid) {
+		// 				alert("Sorry, " + sFileName + " is invalid, allowed extensions are: " + _validFileExtensions.join(", "));
+		// 				document.getElementById("text").innerHTML= "Sorry, " + sFileName + " is invalid, allowed extensions are: " + _validFileExtensions.join(", ")
+		//
+		// 			}
+		// 		}
+		// 	}
+		// }
+    
+    }
+	
+
+</script>
+
+</body>
+</html>
