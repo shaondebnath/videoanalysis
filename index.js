@@ -61,7 +61,8 @@ app.post('/', function(req,res,next){
     var olderfiles = fs.readdirSync(__dirname +'/public/uploads/');
     console.log("request");
     console.log(olderfiles)
-    if (olderfiles.length!=0) {
+    if (olderfiles.length>1) {
+        console.log(olderfiles.length)
         olderfiles.forEach(thisFile => {
             console.log("request: " + thisFile);
             fs.unlink(__dirname + '/public/uploads/' + thisFile, function (err) {
