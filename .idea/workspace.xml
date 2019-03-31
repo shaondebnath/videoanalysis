@@ -36,7 +36,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="891" />
-          <entry key="js" value="479" />
+          <entry key="js" value="497" />
           <entry key="json" value="7" />
           <entry key="md" value="121" />
         </counts>
@@ -45,7 +45,7 @@
         <counts>
           <entry key="HTML" value="891" />
           <entry key="JSON" value="7" />
-          <entry key="JavaScript" value="479" />
+          <entry key="JavaScript" value="497" />
           <entry key="Markdown" value="121" />
         </counts>
       </usages-collector>
@@ -56,7 +56,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
+            <state relative-caret-position="-306">
               <caret line="63" column="7" lean-forward="true" selection-start-line="63" selection-start-column="7" selection-end-line="63" selection-end-column="7" />
             </state>
           </provider>
@@ -83,20 +83,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/analysis.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
+            <state relative-caret-position="442">
               <caret line="65" column="13" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="53">
-              <caret line="80" column="82" selection-start-line="80" selection-start-column="82" selection-end-line="80" selection-end-column="82" />
+            <state relative-caret-position="376">
+              <caret line="107" column="4" selection-start-line="107" selection-start-column="4" selection-end-line="107" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -114,8 +114,8 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/public/analysis.html" />
+        <option value="$PROJECT_DIR$/index.js" />
       </list>
     </option>
   </component>
@@ -167,7 +167,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553995897696" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554018434857" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -192,12 +192,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1553696090071</updated>
-      <workItem from="1553696093169" duration="26057000" />
+      <workItem from="1553696093169" duration="26627000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26057000" />
+    <option name="totallyTimeSpent" value="26627000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -257,22 +257,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
+        <state relative-caret-position="-306">
           <caret line="63" column="7" lean-forward="true" selection-start-line="63" selection-start-column="7" selection-end-line="63" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="80" column="82" selection-start-line="80" selection-start-column="82" selection-end-line="80" selection-end-column="82" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/analysis.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
+        <state relative-caret-position="442">
           <caret line="65" column="13" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="107" column="4" selection-start-line="107" selection-start-column="4" selection-end-line="107" selection-end-column="4" />
         </state>
       </provider>
     </entry>

@@ -9,7 +9,6 @@ global.fetch = require('node-fetch')
 var fs = require('fs');
 var bodyParser = require('body-parser');
 
-
 //var cors = require('cors')
 
 /*var corsOptions = {
@@ -74,7 +73,7 @@ app.post('/', function(req,res,next){
 
     })
 
-    //if(req.files){
+    if(req.files){
         var file = req.files.video;
         var videoUrl = req.body.videoUrl;
         if (videoUrl!=''){
@@ -106,7 +105,7 @@ app.post('/', function(req,res,next){
         }
 
 
-    //}
+    }
 
 });
 
