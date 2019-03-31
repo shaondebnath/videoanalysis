@@ -38,6 +38,9 @@
 				<input type="text" name="videoUrl" id="videoUrl" size="70">
 			</div>
 		</div>
+		<div class="row justify-content-center" id="urlValid">
+
+		</div>
 
 		<div class="row justify-content-center">
 			<br />
@@ -77,9 +80,30 @@ $(document).ready(function() {
     { 
         var videoVal = $('#video').val();
         var videoUrl = $('#videoUrl').val();
+        var isValid = false;
 
-        if (videoUrl!='')
-            return true;
+        if (videoUrl!='') {
+            var nameArray = videoUrl.split(".")
+            var extName = nameArray[nameArray.length-1];
+            console.log(extName)
+            for (var i=0; i<_validFileExtensions.length; i++){
+                console.log("check "+ _validFileExtensions[i] + " : "+extName)
+                if (_validFileExtensions[i]==extName) {
+                    console.log(extName+ ": match")
+                    isValid = true;
+                    break;
+                }
+                else {
+                    document.getElementById("urlValid").innerHTML = "url should be end with .mov/.mp4"
+					isValid = false;
+                }
+            }
+
+            if (isValid)
+                return true;
+            else
+                return false;
+        }
         else if(videoVal=='')
         { 
             alert("empty input file"); 			
