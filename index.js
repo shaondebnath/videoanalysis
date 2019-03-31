@@ -61,17 +61,18 @@ app.post('/', function(req,res,next){
     var olderfiles = fs.readdirSync(__dirname +'/public/uploads/');
     console.log("request");
     console.log(olderfiles)
-    olderfiles.forEach(thisFile =>{
-        console.log("request: "+thisFile);
-        fs.unlink(__dirname +'/public/uploads/'+thisFile, function(err) {
-            if(!err) {
-                console.log('file deleted: '+thisFile);
-            }
-            else
-                console.log(err)
-        });
-
-    })
+    if (olderfiles.length!=0) {
+        olderfiles.forEach(thisFile => {
+            console.log("request: " + thisFile);
+            fs.unlink(__dirname + '/public/uploads/' + thisFile, function (err) {
+                if (!err) {
+                    console.log('file deleted: ' + thisFile);
+                }
+                else
+                    console.log(err)
+            });
+        })
+    }
 
     if(req.files){
         var file = req.files.video;
