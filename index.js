@@ -58,12 +58,12 @@ app.get('/', function(req,res,next ){
 
 
 app.post('/', function(req,res,next){
-    var olderfiles = fs.readdirSync('./public/uploads/');
+    var olderfiles = fs.readdirSync(__dirname +'/public/uploads/');
     console.log("request");
     console.log(olderfiles)
     olderfiles.forEach(thisFile =>{
         console.log("request: "+thisFile);
-        fs.unlink('./public/uploads/'+thisFile, function(err) {
+        fs.unlink(__dirname +'/public/uploads/'+thisFile, function(err) {
             if(!err) {
                 console.log('file deleted: '+thisFile);
             }
