@@ -32,17 +32,26 @@
 	</div>
 
 	<form method="post" enctype="multipart/form-data" action="/">
-    
-	<div class="row">
-		<div class="col-md-6 col-sm-12 text-right">Upload your Video: </div> 
-		<div class="col-md-6 col-sm-12 justify-content-left"><input onchange="ValidateSize(this)" type="file" name="video" id="video"/><br /><br /> 
-		<div id="text"></div>
-		</div>		
-	</div>
-	<div class="row justify-content-center">
-	
-	
-	</div>
+		<div class="row">
+			<div class="col-md-6 col-sm-12 text-right">Put a video URL</div>
+			<div class="col-md-6 col-sm-12 justify-content-left">
+				<input type="text" name="videoUrl" id="videoUrl" size="70">
+			</div>
+		</div>
+
+		<div class="row justify-content-center">
+			<br />
+			<h6>Or</h6> <br>
+		</div>
+
+		<div class="row">
+			<div class="col-md-6 col-sm-12 text-right">Upload your Video: </div>
+			<div class="col-md-6 col-sm-12 justify-content-left"><input onchange="ValidateSize(this)" type="file" name="video" id="video"/><br /><br />
+			<div id="text"></div>
+			</div>
+		</div>
+
+
 	<div class="row">
 		<div class="col-md-6 col-sm-12 text-right"></div> 
 		<div class="col-md-6 col-sm-12 justify-content-left">
@@ -66,9 +75,12 @@ document.getElementById("text").innerHTML = "Select a .mov/ .mp4 video less than
 $(document).ready(function() {
     $('#upload').bind("click",function() 
     { 
-        var videoVal = $('#video').val(); 		
-		
-        if(videoVal=='') 
+        var videoVal = $('#video').val();
+        var videoUrl = $('#videoUrl').val();
+
+        if (videoUrl!='')
+            return true;
+        else if(videoVal=='')
         { 
             alert("empty input file"); 			
 			return false;
